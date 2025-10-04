@@ -295,7 +295,7 @@ function setupCheckoutPage() {
         };
         
         const whatsappLink = document.querySelector(".whatsapp-float");
-        const numeroTienda = whatsappLink ? whatsappLink.href.split('/').pop() : '7681083725';
+        const numeroTienda = whatsappLink ? whatsappLink.href.split('/').pop() : '7681108424';
 
         try {
             // Llama al Backend (Servidor Node.js)
@@ -434,4 +434,5 @@ function setupFooterModals() {
     botonCerrar.addEventListener('click', function () {
         modal.classList.remove('active');
     });
+
 }
