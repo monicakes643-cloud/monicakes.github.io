@@ -1,0 +1,823 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+/*
+font-family: 'Oswald', sans-serif;
+font-family: 'Poppins', sans-serif;
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    min-height: 80vh;
+    background-color: #f5f5f5;
+    padding: 70px 0;
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 25px;
+    color: #111111;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+.menu .navbar ul li {
+    position: relative;
+    float: left;
+}
+
+.menu .navbar ul li a {
+    font-size: 18px;
+    padding: 20px;
+    color: #111111;
+    display: block;
+}
+
+#menu {
+    display: none;
+}
+
+.menu-icono {
+    width: 25px;
+}
+
+.menu label {
+    cursor: pointer;
+    display: none;
+}
+
+.submenu {
+    position: relative;
+}
+
+.submenu #carrito {
+    display: none;
+}
+
+.submenu:hover #carrito {
+    display: block;
+    position: absolute;
+    right: 0;
+    backdrop-filter: blur(10px);
+    top: 100%;
+    z-index: 1;
+    background-color: #4E4B5076;
+    padding: 20px;
+    min-width: 400px;
+}
+
+table {
+    width: 100%;
+}
+table td {
+    padding: 18px 22px;
+}
+table td, table th {
+    padding: 8px 12px;
+}
+
+
+th, td {
+    color: #FFFFFF;
+}
+
+.borrar {
+    background-color: #111111;
+    border-radius: 50%;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #FFFFFF;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+    padding: 0 200px;
+}
+
+.header-img {
+    flex-basis: 50%;
+    text-align: center;
+}
+
+.header-txt {
+    flex-basis: 50%;
+    text-align: center;
+}
+
+.header-txt h1 {
+    font-size: 90px;
+    text-transform: uppercase;
+    line-height: 1.1;
+    color: #111111;
+    font-family: 'Oswald', sans-serif;
+    margin-bottom: 15px;
+}
+
+.header-txt p {
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.btn-1 {
+    display: inline-block;
+    padding: 11px 25px;
+    background-color: #111111;
+    color: #FFFFFF;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-1:hover {
+    background-color: #333333;
+}
+
+.ofert {
+    padding: 20px 0 0 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ofert-1 {
+    display: flex;
+    align-items: center;
+    flex-basis: calc(33.3% - 15px);
+    background-color: #f5f5f5;
+    padding: 35px;
+    margin-bottom: 30px;
+}
+
+.ofert-img {
+    flex-basis: 50%;
+    margin-right: 15px;
+}
+
+.ofert-img img {
+    width: 250px;
+}
+
+.ofert-txt {
+    flex-basis: 50%;
+    text-align: center;
+}
+
+.ofert-txt h3 {
+    color: #111111;
+    font-family: 'Oswald', sans-serif;
+    font-size: 25px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.btn-2 {
+    display: inline-block;
+    padding: 7px 10px;
+    background-color: #111111;
+    color: #FFFFFF;
+    border-radius: 5px;
+    font-size: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-2:hover {
+    background-color: #333333;
+}
+
+.products {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.products h2 {
+    color: #111111;
+    font-family: 'Oswald', sans-serif;
+    font-size: 50px;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}
+
+.product-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+}
+
+.product-content {
+    display: grid;
+    /* Aseguramos que la cuadrícula ocupe todo el ancho disponible */
+    width: 100%; 
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    /* Esto ayuda a forzar el layout */
+    justify-content: space-between; 
+}
+/* Aseguramos que los productos no se desborden */
+.product {
+    box-sizing: border-box; 
+    width: 100%; 
+    text-align: center;
+    padding: 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.product {
+    text-align: center;
+    padding: 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.product img {
+    width: 250px;
+    height: 370px;
+    margin-bottom: 20px;
+}
+
+.product h3 {
+    font-size: 20px;
+    color: #111111;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.product p, .precio {
+    font-size: 16px;
+    color: #111111;
+    margin-bottom: 15px;
+}
+
+.precio {
+    font-weight: 800;
+}
+
+.icons {
+    padding: 50px 0 100px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.icon-1 {
+    flex-basis: calc(33.3% - 30px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px;
+    background-color: #f5f5f5;
+    margin-bottom: 30px;
+}
+
+.icon-txt h3 {
+    font-size: 20px;
+    color: #111111;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+}
+
+.icon-txt p {
+    font-size: 16px;
+    color: #111111;
+}
+
+.blog {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 100px;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.blog-1 {
+    flex-basis: calc(33.3% - 30px);
+    margin-bottom: 30px;
+}
+
+.blog-1 img {
+    margin-bottom: 20px;
+}
+
+.blog-1 h3 {
+    font-size: 20px;
+    color: #111111;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.blog-1 p {
+    font-size: 16px;
+    color: #111111;
+}
+
+.footer {
+    padding: 50px 0;
+    background-color: #111111;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.link h3 {
+    font-size: 18px;
+    color: #FFFFFF;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.link a {
+    font-size: 16px;
+    color: #DCDCDC;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.footer .link ul li a i {
+    margin-right: 8px;
+    color: #707096; 
+}
+
+
+@media (max-width: 991px) {
+    .menu {
+        padding: 20px;
+    }
+
+    .menu label {
+        display: initial;
+    }
+
+    .menu .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #181818;
+        display: none;
+    }
+
+    .menu .navbar ul li {
+        width: 100%;
+    }
+
+    .menu .navbar ul li a {
+        color: #FFFFFF;
+    }
+
+    #menu:checked ~ .navbar {
+        display: initial;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .submenu:hover #carrito {
+        min-width: 100%;
+    }
+
+    .header {
+        min-height: 0vh;
+    }
+
+    .header-content {
+        padding: 50px 0;
+        flex-direction: column;
+    }
+
+    .header-img {
+        display: none;
+    }
+
+    .header-txt {
+        flex-basis: 100%;
+        text-align: center;
+    }
+
+    .header-txt h1 {
+        font-size: 70px;
+    }
+
+    .ofert {
+        padding: 30px;
+        flex-direction: column;
+    }
+
+    .products {
+        padding: 0 30px 30px 30px;
+    }
+
+    .products h2 {
+        margin-bottom: 30px;
+    }
+
+    .product-content {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px;
+    }
+
+    .product img {
+        width: 200px;
+        height: 280px;
+    }
+
+    .icons {
+        padding: 30px;
+        flex-direction: column;
+    }
+
+    .blog {
+        padding: 0 30px 30px 30px;
+        flex-direction: column;
+    }
+
+    .footer {
+        padding: 30px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    html {
+    scroll-behavior: smooth;
+}
+
+}
+/* Dropdown (Submenú) */
+.navbar .dropdown {
+    position: relative;
+}
+
+.navbar .dropdown > a {
+    position: relative;
+    padding-right: 20px;
+}
+
+.navbar .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f8f2f2;
+    min-width: 160px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+}
+
+.navbar .dropdown-menu li a {
+    color: #fff;
+    padding: 10px 20px;
+    display: block;
+    text-align: left;
+    font-size: 16px;
+}
+
+.navbar .dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.navbar .dropdown-menu li a:hover {
+    background-color: #e2e0e0;
+}
+html {
+    scroll-behavior: smooth;
+}
+.whatsapp-float-text {
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    background-color: #25d366;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.25);
+    z-index: 1000;
+    cursor: pointer;
+    text-decoration: none;
+    opacity: 0;
+    animation: fadeInUp 0.8s forwards;
+}
+
+.whatsapp-float-text:hover {
+    background-color: #128c4a;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    animation: fadeIn 0.4s ease-in-out;
+    z-index: 1000; /* Asegurar que esté por encima del resto */
+}
+
+.modal.active {
+    display: block;
+}
+
+.modal .cerrar {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translate(-50%, -60%); }
+    to { opacity: 1; transform: translate(-50%, -50%); }
+}
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    animation: fadeIn 0.4s ease-in-out;
+    z-index: 1000;
+}
+
+.modal.active {
+    display: block;
+}
+
+.modal .cerrar {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #332d33;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    background-color: #25d366;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.25);
+    z-index: 1000;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.whatsapp-float i {
+    font-size: 24px;
+}
+
+.whatsapp-float:hover {
+    background-color: #128c4a;
+    transform: scale(1.1);
+}
+@media (max-width: 768px) {
+    .modal {
+        width: 90%;
+        max-width: 350px;
+        padding: 15px;
+    }
+
+    .modal .cerrar {
+        padding: 3px 8px;
+    }
+}
+.btn-arriba {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #111;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.25);
+    z-index: 1000;
+    cursor: pointer;
+    text-decoration: none;
+    opacity: 0;
+    transition: opacity 0.4s ease, transform 0.3s ease;
+}
+
+.btn-arriba:hover {
+    background-color: #333;
+    transform: scale(1.1);
+}
+.btn-arriba {
+    bottom: 80px; /* Lo movemos más arriba */
+    right: 20px;
+}
+
+.whatsapp-float {
+    bottom: 20px; /* WhatsApp sigue en la parte baja */
+    right: 20px;
+}
+.descripcion-pedido {
+    margin-top: 15px;
+    padding: 10px;
+    background: #4E4B5076; /* Color más limpio */
+    border: 2px solid #080808; /* Un toque de rojo para destacar */
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(255, 255, 255, 0.1);
+}
+
+.descripcion-pedido label {
+    font-weight: bold;
+    color: #f3f0f0; /* Color más neutral */
+    display: block;
+    margin-bottom: 5px;
+}
+
+#detalles-pedido {
+    width: 100%;
+    min-height: 100px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: vertical;
+    font-size: 16px;
+    background: #f8f8f8; /* Color más suave */
+}
+.personalizacion-pedido {
+    margin-top: 15px;
+    padding: 10px;
+    background: #fff; /* Color limpio */
+    border: 2px solid #1d1b1b; /* Resalta la sección */
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+}
+
+.personalizacion-pedido label {
+    font-weight: bold;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+}
+
+#personalizacion {
+    width: 100%;
+    min-height: 100px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: vertical;
+    font-size: 16px;
+    background: #f8f8f8; /* Color suave */
+}
+/* Nuevo CSS para el Checkout (pedido.html) */
+
+/* 1. Contenedor principal para dividir en dos columnas */
+.checkout-grid {
+    display: flex;
+    gap: 40px; /* Espacio entre las columnas */
+    align-items: flex-start; /* Alinea los elementos a la parte superior */
+    padding: 20px 0;
+}
+
+/* 2. Estilos para el resumen del carrito (columna izquierda) */
+#resumen-carrito {
+    flex: 1.5; /* Ocupa más espacio (55%-60%) */
+    background-color: #ffffff; /* Fondo blanco */
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    border: 1px solid #ddd;
+}
+
+/* 3. Estilos para el formulario de pedido (columna derecha) */
+.datos-pedido {
+    flex: 1; /* Ocupa menos espacio (40%-45%) */
+    background-color: #f7f7f7; /* Fondo gris claro */
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+}
+
+/* 4. Ajustar los campos de entrada */
+.datos-pedido input[type="text"], 
+.datos-pedido textarea, 
+.datos-pedido select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    transition: border-color 0.3s;
+}
+
+.datos-pedido input[type="text"]:focus, 
+.datos-pedido textarea:focus, 
+.datos-pedido select:focus {
+    border-color: #ff69b4; /* Color llamativo al enfocar (rosa) */
+    outline: none;
+}
+
+/* 5. Títulos internos */
+.datos-pedido h3 {
+    font-size: 20px;
+    color: #111111;
+    border-bottom: 2px solid #ff69b4; /* Línea rosa llamativa */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* 6. Media Query para móviles (vuelve a ser una sola columna) */
+@media (max-width: 991px) {
+    .checkout-grid {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+}

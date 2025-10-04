@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monicakes - Finalizar Pedido</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        /* CSS TEMPORAL (INLINE) PARA ALINEACIÓN Y VISIBILIDAD */
+        .checkout-grid {
+            display: flex;
+            gap: 40px; 
+            align-items: flex-start;
+            padding: 20px 0;
+        }
+        #resumen-carrito {
+            flex: 1; 
+            padding: 25px;
+            background-color: #ffffff; 
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        .datos-pedido {
+            flex: 1; 
+            padding: 30px;
+            background-color: #f7f7f7; 
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        .datos-pedido input, .datos-pedido textarea, .datos-pedido select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        #lista-carrito-checkout th, #lista-carrito-checkout td {
+            color: #111111; 
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+            text-align: left;
+        }
+        .header {
+            min-height: 0vh; 
+            padding-bottom: 20px;
+        }
+        .header-content {
+            display: none !important;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="menu container">
+            <a href="index.html" class="logo">Monicakes❤️</a> 
+            <input type="checkbox" id="menu"/>
+            <label for="menu">
+                <img src="images/menu.png" class="menu-icono" alt="Abrir menú">
+            </label>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li class="dropdown">
+                        <a href="#">Servicios <i class="fa fa-caret-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="XV.html">XV Años</a></li>
+                            <li><a href="Bodas.html">Bodas</a></li>
+                            <li><a href="niños.html">Infantil</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#redes-sociales">Contacto</a></li>
+                </ul>
+            </nav>
+            <div>
+                <ul>
+                    <li class="submenu">
+                        <img src="images/car.svg" id="img-carrito" alt="Carrito">
+                        <div id="carrito">
+                            </div>
+                    </li>
+                </ul>
+            </div>
+            </div>
+
+        <div class="header-content container">
+        </div>
+    </header> 
+
+    <main class="checkout-page container" style="padding: 50px 0;">
+        <h2 style="text-align: center; margin-bottom: 30px;">Resumen de Pedido y Datos de Entrega</h2>
+        
+        <div class="checkout-grid">
+        
+            <div id="resumen-carrito">
+                
+                <table id="lista-carrito-checkout" style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
+                    <thead>
+                        <tr>
+                            <th>Imagen</th>
+                            <th>Nombre</th>
+                            <th>Precio</th>
+                            <th>Cantidad</th>
+                            <th>Subtotal</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody> 
+                    <tfoot>
+                        <tr>
+                            <td colspan="4" style="text-align: right;"><strong>Total:</strong></td>
+                            <td id="total-carrito-checkout">$0.00</td>
+                            <td></td>
+                        </tr>
+                    </tfoot>
+                </table>
+                
+                <a href="index.html" class="btn-1" style="display: block; text-align: center; margin-top: 15px;">⬅️ Volver a Productos</a>
+            </div>
+            
+            <div class="datos-pedido">
+                <h3>📋 Información de Contacto y Entrega</h3>
+                
+                <label for="cliente-nombre">👤 Tu Nombre:</label>
+                <input type="text" id="cliente-nombre" placeholder="">
+                
+                <label for="whatsapp-cliente">📱 Tu WhatsApp (para confirmación):</label>
+                <input type="text" id="whatsapp-cliente" placeholder="">
+                
+                <div class="personalizacion-pedido">
+                    <label for="personalizacion">🎨 Personalización del pastel:</label>
+                    <textarea id="personalizacion" placeholder="Ejemplo: Pastel de chocolate, color azul etc" rows="4"></textarea>
+                </div>
+                
+                <label for="lugar-entrega">📍 Lugar de entrega:</label>
+                <input type="text" id="lugar-entrega" placeholder="Ejemplo: Calle 123, Colonia Centro...">
+                
+                <label for="horario-entrega">⏰ Horario preferido:</label>
+                <input type="text" id="horario-entrega" placeholder="Ejemplo: 3:00 PM - 5:00 PM">
+                
+                <label for="forma-pago">💳 Forma de pago:</label>
+                <select id="forma-pago">
+                    <option value="Efectivo">Efectivo</option>
+                    <option value="Transferencia">Transferencia</option>
+                    <option value="Tarjeta">Tarjeta de crédito/débito</option>
+                </select>
+                
+                <button id="confirmar-pedido-btn" class="btn-2" style="width: 100%; margin-top: 20px;">✅ Confirmar y Enviar Pedido</button>
+            </div>
+            
+        </div> 
+    </main>
+
+    <footer class="footer"> 
+        <div class="footer-content container">
+            <div class="link">
+                </div>
+        </div>
+    </footer>
+
+
+    <a href="https://wa.me/7681108424" target="_blank" class="whatsapp-float">
+        <i class="fab fa-whatsapp"></i> Contáctanos
+    </a>
+    <button id="btn-arriba" class="btn-arriba">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="scrip.js"></script>
+</body>
+</html>
